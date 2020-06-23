@@ -5,18 +5,13 @@ export FLAGS_sync_nccl_allreduce=1
 export CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7
 
 export PYTHONPATH=./ernie:${PYTHONPATH:-}
-python ./ernie/finetune_launch.py  \
-    --nproc_per_node 8 \
-    --selected_gpus 0,1,2,3,4,5,6,7 \
-    --node_ips $(hostname -i) \
-    --node_id 0 \
-./ernie/run_mrc.py --use_cuda true\
+python ./ernie/run_mrc.py --use_cuda true\
                     --batch_size 16 \
                     --in_tokens false\
                     --use_fast_executor true \
                     --checkpoints ./checkpoints \
-                    --vocab_path ${MODEL_PATH}/vocab.txt  \
-                    --ernie_config_path ${MODEL_PATH}/ernie_config.json \
+                    --vocab_path /ernie_model/vocab.txt  \
+                    --ernie_config_path /ernie_model/ernie_config.json \
                     --do_train true \
                     --do_val true \
                     --do_test true \
@@ -29,10 +24,10 @@ python ./ernie/finetune_launch.py  \
                     --max_seq_len 512 \
                     --do_lower_case true \
                     --doc_stride 128 \
-                    --train_set ${TASK_DATA_PATH}/drcd/train.json \
-                    --dev_set ${TASK_DATA_PATH}/drcd/dev.json \
-                    --test_set ${TASK_DATA_PATH}/drcd/test.json \
+                    --train_set ./dataset/origin/train.json \
+                    --dev_set ./dataset/origin/dev.json \
+                    --test_set ./dataset/origin/test.json \
                     --learning_rate 5e-5 \
                     --num_iteration_per_drop_scope 1 \
-                    --init_pretraining_params ${MODEL_PATH}/params \
+                    --init_pretraining_params /ernie_model/params \
                     --skip_steps 10
