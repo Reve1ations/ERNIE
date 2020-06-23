@@ -254,15 +254,15 @@ def main(args):
                         verbose += "learning rate: %f" % (
                             outputs["learning_rate"]
                             if warmup_steps > 0 else args.learning_rate)
-                        log.info(verbose)
+                        #log.info(verbose)
 
                     current_example, current_epoch = reader.get_train_progress()
                     time_end = time.time()
                     used_time = time_end - time_begin
-                    log.info("epoch: %d, progress: %d/%d, step: %d, ave loss: %f, "
-                          "speed: %f steps/s" %
-                          (current_epoch, current_example, num_train_examples,
-                           steps, outputs["loss"], args.skip_steps / used_time))
+                    #log.info("epoch: %d, progress: %d/%d, step: %d, ave loss: %f, "
+                    #      "speed: %f steps/s" %
+                    #      (current_epoch, current_example, num_train_examples,
+                    #       steps, outputs["loss"], args.skip_steps / used_time))
                     time_begin = time.time()
 
                 if steps % args.save_steps == 0:
