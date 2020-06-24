@@ -45,7 +45,7 @@ def mixed_segmentation(in_str, rm_punc=False):
         '？', '！', '“', '”', '；', '’', '《', '》', '……', '·', '、', '「', '」', '（',
         '）', '－', '～', '『', '』'
     ]
-    nltk.download()
+    nltk.download('punkt')    
     for char in in_str:
         if rm_punc and char in sp_char:
             continue
