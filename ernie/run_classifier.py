@@ -339,10 +339,9 @@ def main(args):
 
     # final eval on dev set
     if args.do_val:
-        #evaluate_wrapper(args, reader, exe, test_prog, test_pyreader,
-        #                 graph_vars, current_epoch, steps)
-        predict_wrapper(args, reader, exe, test_prog, test_pyreader, graph_vars,
-                        current_epoch, steps)
+        evaluate_wrapper(args, reader, exe, test_prog, test_pyreader,
+                         graph_vars, current_epoch, steps)
+
 
     # final eval on test set
     if args.do_test:
