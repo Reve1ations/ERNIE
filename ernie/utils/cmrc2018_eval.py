@@ -45,7 +45,6 @@ def mixed_segmentation(in_str, rm_punc=False):
         '？', '！', '“', '”', '；', '’', '《', '》', '……', '·', '、', '「', '」', '（',
         '）', '－', '～', '『', '』'
     ]
-    nltk.download('punkt')    
     for char in in_str:
         if rm_punc and char in sp_char:
             continue
@@ -158,7 +157,8 @@ def calc_em_score(answers, prediction):
 def eval_file(dataset_file, prediction_file):
     ground_truth_file = json.load(open(dataset_file, 'r'))
     prediction_file = json.load(open(prediction_file, 'r'))
-    F1, EM, TOTAL, SKIP = evaluate(ground_truth_file, prediction_file)
+    #F1, EM, TOTAL, SKIP = evaluate(ground_truth_file, prediction_file)
+    F1, EM, TOTAL, SKIP = 0.0, 0.0, 0.0, 0.0
     AVG = (EM + F1) * 0.5
     return EM, F1, AVG, TOTAL
 
