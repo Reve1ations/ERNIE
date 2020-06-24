@@ -9,13 +9,12 @@ python -u ./ernie/run_classifier.py \
                    --use_cuda true \
                    --verbose true \
                    --do_train true \
-                   --do_val false \
-                   --do_test true \
+                   --do_val true \
+                   --do_test false \
                    --batch_size 32 \
                    --init_pretraining_params /ernie_model/params \
                    --train_set ./classified_data/train.txt \
-                   --dev_set ./classified_data/no.txt \
-                   --test_set ./classified_data/test.txt \                   
+                   --dev_set ./classified_data/dev.txt \
                    --vocab_path /ernie_model/vocab.txt \
                    --checkpoints ./checkpoints \
                    --save_steps 1000 \
