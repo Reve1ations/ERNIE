@@ -514,10 +514,10 @@ class MRCReader(BaseReader):
                         orig_answer_text = None
 
                         if is_training:
-                            if len(qa["answers"]) != 1:
-                                raise ValueError(
-                                    "For training, each question should have exactly 1 answer."
-                                )
+                            #if len(qa["answers"]) != 1:
+                            #    raise ValueError(
+                            #        "For training, each question should have exactly 1 answer."
+                            #    )
 
                             answer = qa["answers"][0]
                             orig_answer_text = answer["text"]
