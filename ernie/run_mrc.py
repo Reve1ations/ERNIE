@@ -239,6 +239,7 @@ def main(args):
             graph_vars["learning_rate"] = scheduled_lr
 
         time_begin = time.time()
+        past_epoch = 0
         while True:
             try:
                 steps += 1
@@ -264,13 +265,13 @@ def main(args):
                     #      (current_epoch, current_example, num_train_examples,
                     #       steps, outputs["loss"], args.skip_steps / used_time))
                     time_begin = time.time()
-
-                if steps % args.save_steps == 0:
+								current_example, current_epoch = reader.get_train_progress()
+                if current_epoch != past_epoch:#if steps % args.save_steps == 0:
                     save_path = os.path.join(args.checkpoints,
                                              "step_" + str(steps))
                     fluid.io.save_persistables(exe, save_path, train_program)
 
-                if steps % args.validation_steps == 0:
+                if current_epoch != past_epoch:#if steps % args.validation_steps == 0:
                     if args.do_val:
                         test_pyreader.set_batch_generator(
                             reader.data_generator(
@@ -308,7 +309,7 @@ def main(args):
                             examples=reader.get_examples("test"),
                             features=reader.get_features("test"),
                             args=args)
-
+								past_epoch = current_epoch
             except fluid.core.EOFException:
                 save_path = os.path.join(args.checkpoints, "step_" + str(steps))
                 fluid.io.save_persistables(exe, save_path, train_program)

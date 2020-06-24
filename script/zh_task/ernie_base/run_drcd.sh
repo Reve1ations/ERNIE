@@ -13,7 +13,7 @@ python ./ernie/run_mrc.py --use_cuda true\
                     --vocab_path /ernie_model/vocab.txt  \
                     --ernie_config_path /ernie_model/ernie_config.json \
                     --do_train true \
-                    --do_val true \
+                    --do_val false \
                     --do_test true \
                     --verbose true \
                     --save_steps 1000 \
@@ -27,7 +27,7 @@ python ./ernie/run_mrc.py --use_cuda true\
                     --do_lower_case true \
                     --doc_stride 128 \
                     --train_set ./dataset/origin/train.json \
-                    --dev_set ./dataset/origin/dev.json \
+                    --dev_set ./dataset/origin/no.json \
                     --test_set ./dataset/origin/test.json \
                     --learning_rate 5e-5 \
                     --num_iteration_per_drop_scope 1 \
