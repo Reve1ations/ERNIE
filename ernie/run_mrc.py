@@ -265,7 +265,7 @@ def main(args):
                     #      (current_epoch, current_example, num_train_examples,
                     #       steps, outputs["loss"], args.skip_steps / used_time))
                     time_begin = time.time()
-								current_example, current_epoch = reader.get_train_progress()
+                current_example, current_epoch = reader.get_train_progress()
                 if current_epoch != past_epoch:#if steps % args.save_steps == 0:
                     save_path = os.path.join(args.checkpoints,
                                              "step_" + str(steps))
@@ -309,7 +309,7 @@ def main(args):
                             examples=reader.get_examples("test"),
                             features=reader.get_features("test"),
                             args=args)
-								past_epoch = current_epoch
+                past_epoch = current_epoch
             except fluid.core.EOFException:
                 save_path = os.path.join(args.checkpoints, "step_" + str(steps))
                 fluid.io.save_persistables(exe, save_path, train_program)
