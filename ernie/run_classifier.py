@@ -435,7 +435,6 @@ def predict_wrapper(args, reader, exe, test_prog, test_pyreader, graph_vars,
         with open(save_path, 'w') as f:
             if len(qids) == 0:
                 for s, p in zip(preds, probs):
-                    print('this is answer line')
                     print('{}\t{}\n'.format(s, p))
 
                     f.write('{}\t{}\n'.format(s, p))
