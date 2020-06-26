@@ -22,13 +22,13 @@ python ./ernie/run_mrc.py --use_cuda true\
                     --weight_decay  0.01 \
                     --epoch 2 \
                     --max_seq_len 512 \
-                    --max_query_length 80 \
-                    --max_answer_length 80 \
+                    --max_query_length 60 \
+                    --max_answer_length 30 \
                     --do_lower_case true \
                     --doc_stride 128 \
-                    --train_set ./dataset/simp_decomp/train.json \
+                    --train_set ./dataset/decomp/train_first.json \
                     --dev_set ./dataset/origin/no.json \
-                    --test_set ./dataset/simp_decomp/test.json \
+                    --test_set ./dataset/decomp/reason_test_first.json \
                     --learning_rate 5e-5 \
                     --num_iteration_per_drop_scope 1 \
                     --init_pretraining_params /ernie_model/params \
