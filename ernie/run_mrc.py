@@ -43,9 +43,6 @@ log = logging.getLogger()
 
 
 def main(args):
-    with open('/bug_ernie_model/ernie_config.json', 'r', encoding='utf8') as json_file:
-        config_dict = json.load(json_file)
-
     ernie_config = ErnieConfig(args.ernie_config_path)
     ernie_config.print_config()
 
