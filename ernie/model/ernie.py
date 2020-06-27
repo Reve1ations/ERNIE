@@ -35,13 +35,15 @@ class ErnieConfig(object):
         self._config_dict = self._parse(config_path)
 
     def _parse(self, config_path):
-        try:
+        if True:#try:
             with open(config_path, 'r', encoding='utf8') as json_file:
+                print(config_path)
+
                 config_dict = json.load(json_file)
-        except Exception:
-            raise IOError("Error in parsing Ernie model config file '%s'" %
-                          config_path)
-        else:
+        #except Exception:
+            #raise IOError("Error in parsing Ernie model config file '%s'" %
+                          #config_path)
+        #else:
             return config_dict
 
     def __getitem__(self, key):
