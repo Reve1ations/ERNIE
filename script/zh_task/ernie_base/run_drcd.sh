@@ -26,7 +26,7 @@ python ./ernie/run_mrc.py --use_cuda true\
                     --max_answer_length 80 \
                     --do_lower_case true \
                     --doc_stride 128 \
-                    --train_set ./dataset/decomp/train_single.json \
+                    --train_set ./dataset/decomp/final/train_single.json \
                     --dev_set ./dataset/origin/no.json \
                     --test_set ./dataset/decomp/origin_question_retrieval/non_reason_test_reason_test_second_answer.json \
                     --learning_rate 5e-5 \
