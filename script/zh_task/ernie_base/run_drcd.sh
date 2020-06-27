@@ -11,7 +11,7 @@ python ./ernie/run_mrc.py --use_cuda true\
                     --use_fast_executor true \
                     --checkpoints ./checkpoints \
                     --vocab_path /ernie_model/vocab.txt  \
-                    --ernie_config_path /ernie_model/ernie_config.json \
+                    --ernie_config_path ./dataset/ernie_config.json \
                     --do_train true \
                     --do_val false \
                     --do_test true \
