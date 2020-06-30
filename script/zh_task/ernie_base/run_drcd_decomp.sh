@@ -10,8 +10,8 @@ python ./ernie/run_mrc.py --use_cuda true\
                     --in_tokens false\
                     --use_fast_executor true \
                     --checkpoints ./checkpoints \
-                    --vocab_path /ernie_model/vocab.txt  \
-                    --ernie_config_path /ernie_model/ernie_config.json \
+                    --vocab_path /ERNIE_model/vocab.txt  \
+                    --ernie_config_path /ERNIE_model/ernie_config.json \
                     --do_train true \
                     --do_val false \
                     --do_test true \
@@ -26,10 +26,10 @@ python ./ernie/run_mrc.py --use_cuda true\
                     --max_answer_length 60 \
                     --do_lower_case true \
                     --doc_stride 128 \
-                    --train_set ./sub_question/no_question/train.json \
+                    --train_set ./sub_question/long/train.json \
                     --dev_set ./dataset/origin/no.json \
-                    --test_set ./sub_question/no_question/test.json \
+                    --test_set ./dataset/rescore/sub_question/test.json \
                     --learning_rate 5e-5 \
                     --num_iteration_per_drop_scope 1 \
-                    --init_pretraining_params /ernie_model/params \
+                    --init_pretraining_params /ERNIE_model/params \
                     --skip_steps 10
