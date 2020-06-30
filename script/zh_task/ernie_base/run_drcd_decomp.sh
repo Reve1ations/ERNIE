@@ -21,7 +21,7 @@ python ./ernie/run_mrc.py --use_cuda true\
                     --warmup_proportion 0.0 \
                     --weight_decay  0.01 \
                     --epoch 2 \
-                    --max_seq_len 80 \
+                    --max_seq_len 350 \
                     --max_query_length 256 \
                     --max_answer_length 60 \
                     --do_lower_case true \
