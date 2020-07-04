@@ -11,11 +11,11 @@ python -u ./ernie/run_classifier.py \
                    --do_train true \
                    --do_val true \
                    --do_test true \
-                   --batch_size 32 \
+                   --batch_size 16 \
                    --init_pretraining_params /ERNIE_model/params \
-                   --train_set ./classified_data/train.txt \
-                   --dev_set ./classified_data/dev.txt \
-                   --test_set ./classified_data/test.txt \
+                   --train_set ./dataset/rescore/classify/train_classify.txt \
+                   --dev_set ./dataset/rescore/classify/dev_classify.txt \
+                   --test_set ./dataset/rescore/classify/test_classify.txt \
                    --vocab_path /ERNIE_model/vocab.txt \
                    --checkpoints ./checkpoints \
                    --save_steps 1000 \
@@ -23,7 +23,7 @@ python -u ./ernie/run_classifier.py \
                    --warmup_proportion 0.0 \
                    --validation_steps 100 \
                    --epoch 2 \
-                   --max_seq_len 128 \
+                   --max_seq_len 512 \
                    --ernie_config_path /ERNIE_model/ernie_config.json \
                    --learning_rate 5e-5 \
                    --skip_steps 10 \
