@@ -22,8 +22,8 @@ python ./ernie/run_mrc.py --use_cuda true\
                     --weight_decay  0.01 \
                     --epoch 2 \
                     --max_seq_len 512 \
-                    --max_query_length 60 \
-                    --max_answer_length 30 \
+                    --max_query_length 80 \
+                    --max_answer_length 80 \
                     --do_lower_case true \
                     --doc_stride 128 \
                   	--train_set ./dataset/decomp/train_first.json \
