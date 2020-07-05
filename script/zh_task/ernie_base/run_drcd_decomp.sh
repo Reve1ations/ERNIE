@@ -21,14 +21,14 @@ python ./ernie/run_mrc.py --use_cuda true\
                     --warmup_proportion 0.0 \
                     --weight_decay  0.01 \
                     --epoch 1 \
-                    --max_seq_len 80 \
+                    --max_seq_len 350 \
                     --max_query_length 256 \
                     --max_answer_length 60 \
                     --do_lower_case true \
                     --doc_stride 128 \
-                    --train_set ./dataset/decomp/sub_question/no_question/train.json \
+                    --train_set ./dataset/decomp/sub_question/long/train.json \
                     --dev_set ./dataset/origin/no.json \
-                    --test_set ./dataset/score_1000/sub_question/test_no_question.json \
+                    --test_set ./dataset/score_1000/sub_question/test_long_question.json \
                     --learning_rate 5e-5 \
                     --num_iteration_per_drop_scope 1 \
                     --init_pretraining_params /ERNIE_model/params \
