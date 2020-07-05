@@ -20,7 +20,7 @@ python ./ernie/run_mrc.py --use_cuda true\
                     --validation_steps 100 \
                     --warmup_proportion 0.0 \
                     --weight_decay  0.01 \
-                    --epoch 2 \
+                    --epoch 1 \
                     --max_seq_len 80 \
                     --max_query_length 256 \
                     --max_answer_length 60 \
