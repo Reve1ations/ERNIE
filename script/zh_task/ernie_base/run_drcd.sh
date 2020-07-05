@@ -26,10 +26,10 @@ python ./ernie/run_mrc.py --use_cuda true\
                     --max_answer_length 80 \
                     --do_lower_case true \
                     --doc_stride 128 \
-                  	--train_set ./dataset/decomp/final/train_single.json \
+                  	--train_set ./dataset/score_1000/train_single_1000.json \
                     --dev_set ./dataset/origin/no.json \
-                  	--test_set ./dataset/rescore/simp_train_test_second_answer.json \
-                    --learning_rate 1e-5 \
+                  	--test_set ./dataset/score_1000/simp_train_test.json \
+                    --learning_rate 5e-5 \
                     --num_iteration_per_drop_scope 1 \
                     --init_pretraining_params /ERNIE_model/params \
                     --skip_steps 10
