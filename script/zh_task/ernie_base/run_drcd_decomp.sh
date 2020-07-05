@@ -26,9 +26,9 @@ python ./ernie/run_mrc.py --use_cuda true\
                     --max_answer_length 60 \
                     --do_lower_case true \
                     --doc_stride 128 \
-                    --train_set ./sub_question/no_question/train.json \
+                    --train_set ./dataset/decomp/sub_question/no_question/train.json \
                     --dev_set ./dataset/origin/no.json \
-                    --test_set ./dataset/rescore/sub_question/test_no_question.json \
+                    --test_set ./dataset/score_1000/sub_question/test_no_question.json \
                     --learning_rate 5e-5 \
                     --num_iteration_per_drop_scope 1 \
                     --init_pretraining_params /ERNIE_model/params \
