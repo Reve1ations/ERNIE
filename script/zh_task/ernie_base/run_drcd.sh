@@ -20,15 +20,15 @@ python ./ernie/run_mrc.py --use_cuda true\
                     --validation_steps 100 \
                     --warmup_proportion 0.0 \
                     --weight_decay  0.01 \
-                    --epoch 1 \
+                    --epoch 2 \
                     --max_seq_len 512 \
-                    --max_query_length 80 \
-                    --max_answer_length 80 \
+                    --max_query_length 60 \
+                    --max_answer_length 30 \
                     --do_lower_case true \
                     --doc_stride 128 \
-                  	--train_set ./dataset/score_1000/train_single_1000.json \
+                  	--train_set ./dataset/decomp/train_first.json \
                     --dev_set ./dataset/origin/no.json \
-                  	--test_set ./dataset/score_1000/simp_train_test_second_answer.json \
+                  	--test_set ./dataset/decomp_1000/reason_test_first.json \
                     --learning_rate 5e-5 \
                     --num_iteration_per_drop_scope 1 \
                     --init_pretraining_params /ERNIE_model/params \
