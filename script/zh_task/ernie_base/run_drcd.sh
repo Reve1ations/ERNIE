@@ -33,4 +33,3 @@ python ./ernie/run_mrc.py --use_cuda true\
                     --num_iteration_per_drop_scope 1 \
                     --init_pretraining_params /ERNIE_model/params \
                     --skip_steps 10
-“石鱼”水雷储存时间是多久？它的结构特点是什么？
