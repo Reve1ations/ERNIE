@@ -29,7 +29,7 @@ python ./ernie/run_mrc.py --use_cuda true\
                   	--train_set ./dataset/decomp_1000/train_single.json \
                     --dev_set ./dataset/origin/no.json \
                   	--test_set ./dataset/decomp_1000/non_reason_test_reason_test_second_answer.json \
-                    --learning_rate 1e-5 \
+                    --learning_rate 5e-5 \
                     --num_iteration_per_drop_scope 1 \
                     --init_pretraining_params /ERNIE_model/params \
                     --skip_steps 10
