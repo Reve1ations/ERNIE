@@ -28,7 +28,7 @@ python ./ernie/run_mrc.py --use_cuda true\
                     --doc_stride 128 \
                   	--train_set ./dataset/decomp/combine_final/train_single.json \
                     --dev_set ./dataset/origin/no.json \
-                  	--test_set ./dataset/score/simp_train_test.json \
+                  	--test_set ./dataset/score/simp_train_test_second_answer.json \
                     --learning_rate 5e-5 \
                     --num_iteration_per_drop_scope 1 \
                     --init_pretraining_params /ERNIE_model/params \
