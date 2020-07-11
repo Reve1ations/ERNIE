@@ -13,9 +13,9 @@ python -u ./ernie/run_classifier.py \
                    --do_test true \
                    --batch_size 16 \
                    --init_pretraining_params /ERNIE_model/params \
-                   --train_set ./dataset/score_1000/classify/train_classify.txt \
-                   --dev_set ./dataset/score_1000/classify/dev_classify.txt \
-                   --test_set ./dataset/score_1000/classify/test_classify.txt \
+                   --train_set ./dataset/score/classify/train_classify.txt \
+                   --dev_set ./dataset/score/classify/dev_classify.txt \
+                   --test_set ./dataset/score/classify/test_classify.txt \
                    --vocab_path /ERNIE_model/vocab.txt \
                    --checkpoints ./checkpoints \
                    --save_steps 1000 \
